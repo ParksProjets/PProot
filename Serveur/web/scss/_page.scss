@@ -1,0 +1,95 @@
+/*
+
+Style générale des éléments de la page
+
+*/
+
+
+
+
+
+// Titres
+
+h1 {
+	padding: 15px 0 20px;
+	font-size: 30px;
+}
+
+
+h3 {
+	padding: 15px 0;
+	font-size: 22px;
+
+	input {
+		height: 25px;
+		float: right;
+		border: none;
+		outline: none;
+	}
+
+	i {
+		float: right;
+		font-size: 11px;
+		line-height: 25px;
+		margin-right: 5px;
+		color: #777;
+	}
+}
+
+
+
+
+// Table
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+
+// Container
+
+.container {
+	width: 940px;
+	margin: 0 auto;
+}
+
+
+
+
+// Caches
+
+.cache {
+	position: fixed;
+	z-index: 999;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba(18, 18, 18, 0.84);
+	display: none;
+}
+
+
+
+
+
+
+// Containers précis
+
+#page-main {
+	display: none;
+	margin-top: 50px;
+}
+
+
+.top {
+	margin-bottom: 20px;
+}
+
+#bottom {
+	margin-bottom: 60px;
+	clear: both;
+}

@@ -1,0 +1,52 @@
+/*
+
+Page de config
+
+*/
+
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+
+body {
+	font: 18px Arial, sans-serif;
+	margin: 30px;
+}
+
+
+h1 {
+	font-size: 30px;
+	text-decoration: underline;
+}
+
+
+h4 {
+	margin-top: 25px;
+	font-weight: normal;
+}
+
+
+h3 {
+	margin: 30px 0;
+	font-size: 23px;
+}
+
+
+span {
+	margin-left: 15px;
+}
+
+.on {
+	color: #02E502;
+}
+.off {
+	color: #E50202;
+}
+
+
+button {
+	  margin-left: 20px;
+}

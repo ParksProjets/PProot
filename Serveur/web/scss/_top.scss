@@ -1,0 +1,221 @@
+/*
+
+Style du panel en haut
+
+*/
+
+
+.p-edit {
+
+	width: 500px;
+	height: 50px;
+	outline: none;
+	line-height: 30px;
+
+	span {
+		background: #D3D3D3;
+		padding: 0 10px;
+		font-size: 15px;
+		border-radius: 5px;
+		border-bottom: 2px solid #B1B1B1;
+		border-top: 2px solid #D3D3D3;
+		display: inline-block;
+		line-height: 30px;
+		margin-right: 5px;
+		color: #5E5E5E;
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+// Affichages
+
+.views, #spe div {
+
+	border: 2px solid #AEAEAE;
+	border-radius: 14px;
+	color: #454545;
+	background: #F7F7F7;
+	float: left;
+	width: 150px;
+	height: 120px;
+	margin-right: 15px;
+	position: relative;
+	cursor: pointer;
+	
+	
+	&.active {
+		border: 3px solid #24B847;
+		background: #D4FFD9;
+		color: #0F5918;
+	}
+
+
+	i {
+		color: #919191;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		font-size: 26px;
+		margin-top: -20px;
+		margin-left: -13px;
+		transition: color .4s;
+
+		&:hover {
+			color: #7556E8;
+		}
+	}
+
+
+	p {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		text-align: center;
+	}
+
+}
+
+
+
+
+// Petit éléments
+
+#input-reloadTime {
+	width: 40px;
+	margin-left: 5px;
+}
+
+
+#nbrConnectedPc {
+	clear: both;
+	margin-top: 150px;
+}
+
+
+
+
+
+
+
+
+// Spe / Séquences
+
+.addPanel button {
+	margin-left: 20px;
+	display: inline;
+}
+
+
+#spePanel, #seqPanel {
+
+	h3 i {
+		font-size: 20px;
+		cursor: pointer;
+	}
+
+}
+
+
+
+
+
+
+
+// Spe
+
+#spePanel {
+	
+	h3 {
+		padding-bottom: 0;
+	}
+
+	label {
+		display: inline-block;
+	}
+
+	.l-users {
+		line-height: 55px;
+	}
+
+	.p-edit {
+		display: inline-block;
+		width: 430px;
+		height: 30px;
+	}
+}
+
+
+
+
+#spe {
+
+	margin-bottom: 10px;
+
+	> div {
+		height: 70px;
+		border-radius: 8px;
+	}
+
+	i {
+		font-size: 22px !important;
+		margin-left: -10px !important;
+		margin-top: -18px !important;
+	}
+
+	p {
+		font-size: 16px;
+	}
+}
+
+
+#addSpeBtn {
+	color: #A5A5A5 !important;
+	width: 80px !important;
+	line-height: 69px;
+	text-align: center;
+	font-size: 50px;
+}
+
+
+
+
+
+
+// Séquences
+
+#sequences {
+
+	margin-bottom: 10px;
+
+	> div {
+		border: 2px solid #AEAEAE;
+		border-radius: 7px;
+		color: #454545;
+		background: #F7F7F7;
+		float: left;
+		width: 150px;
+		margin-right: 15px;
+		cursor: pointer;
+		text-align: center;
+		line-height: 40px;
+	}
+}
+
+
+#addSeqBtn {
+	font-size: 35px !important;
+	color: #A5A5A5 !important;
+	width: 80px !important;
+}
+
+

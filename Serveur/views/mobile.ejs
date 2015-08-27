@@ -1,0 +1,59 @@
+<html>
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no"/>
+
+	
+	<title>Mobile</title>
+
+	<link rel="stylesheet" href="css/mobile.css">
+
+</head>
+<body>
+
+	
+	<div id="button">
+		
+		<div id="buttonOn">
+			<p>Activer</p>
+		</div>
+
+		<div id="buttonOff">
+			<p>Désactiver</p>
+		</div>
+
+	</div>
+	
+	
+	
+	<div id="list">
+
+	<div class="main">
+		<h2>Bloquage sur tous</h2>
+	</div>
+
+
+	<% for (var i = 0, l = spes.length; i < l; i++) { %>
+		
+		<div>
+			<h2><%= spes[i].name %></h2>
+		</div>
+
+	<% } %>
+
+	</div>
+
+
+	<div id="password">
+		
+		<h4>Entrez le mot de passe</h4>
+		<input type="password" placeholder="Mot de passe">
+	</div>
+
+
+	<script src="js/jquery.js"></script>
+	<script src="js/mobile.js"></script>
+
+</body>
+</html>

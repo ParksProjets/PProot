@@ -1,0 +1,53 @@
+<!--
+
+Affichage: Web
+
+-->
+
+
+
+
+<div class="panel" data-name="web">
+	
+
+	<h3>Web</h3>
+	
+	<label for="affWebUrl">Url:</label>
+	<input type="text" id="affWebUrl">
+	<br><br>
+
+	<input type="checkbox" id="affWebAI">
+	<label>Activer la souris et le clavier</label>
+
+</div>
+
+
+
+<script>
+
+var $webUrl = $("#affWebUrl"),
+	$webAllowInput = $("#affWebAI");
+
+
+$webUrl.change(function() {
+	App.post("affichageCmd", { aff: "web", cmd: "setUrl", url: $(this).val() });
+});
+
+
+$webAllowInput.change(function() {
+	console.log(this.checked);
+	App.post("affichageCmd", { aff: "web", cmd: "allowInput", value: this.checked });
+});
+
+
+
+App.addEventListener("set-AFFweb", function(e) {
+	var obj = e.message.value;
+
+	if (!$webUrl.is(":focus"))
+		$webUrl.val(obj.url);
+
+	$webAllowInput.prop('checked', obj.allowInput);
+});
+
+</script>

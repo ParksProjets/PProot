@@ -1,0 +1,33 @@
+*****************
+
+Spécialités
+
+*****************
+
+
+
+Name: Charmasson
+
+Users: damien.charmasson
+
+Seq: Charmasson
+
+
+
+
+Name: Gibert
+
+Users: *admin* christophe.gibert *eleve*
+
+Seq: Gibert
+
+
+
+
+
+
+Name: Maths
+
+Users: francois.lames marie.decombe
+
+Seq: Maths

@@ -1,0 +1,34 @@
+<html>
+<head>
+
+	<meta charset="utf-8">
+
+	
+	<title>Infos</title>
+
+	<link rel="stylesheet" href="css/infos.css">
+
+</head>
+<body>
+
+
+	<h1>PProot Infos</h1>
+
+	<a href="resetInfos">Reset</a>
+
+
+	<p class="deploitNbr">Nombre de requêtes enregistrées: <b><%= infos.deploitNbr %></b></p>
+
+
+
+	<h3>Adresses IP enregistrées</h3>
+
+	<% for (var i = 0, l = infos.ip.length; i < l; i++) { %>
+		
+		<div class="ip"><%= infos.ip[i] %></div>
+
+	<% } %>
+
+
+</body>
+</html>

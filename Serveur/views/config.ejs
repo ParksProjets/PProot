@@ -1,0 +1,54 @@
+<html>
+<head>
+
+	<meta charset="utf-8">
+
+	
+	<title>Config</title>
+
+	<link rel="stylesheet" href="css/config.css">
+
+</head>
+<body>
+
+
+	<h1>Page de configuration</h1>
+
+
+	<h4>Entrer le mot de passe avant toute modification</h4>
+	<input type="password" id="password" placeholder="Mot de passe">
+
+
+	<h3>
+		PProot activé ?
+
+		<% if (active) { %>
+			<span class="on">Oui</span>
+		<% } else { %>
+			<span class="off">Non</span>
+		<% } %>
+
+		<button data-type="switch" data-name="active">Changer</button>
+	</h3>
+
+
+
+	<h3>
+		PProot doit être supprimé ?
+
+		<% if (mustDelete) { %>
+			<span class="on">Oui</span>
+		<% } else { %>
+			<span class="off">Non</span>
+		<% } %>
+
+		<button data-type="switch" data-name="mustDelete">Changer</button>
+	</h3>
+	
+
+
+	<script src="js/jquery.js"></script>
+	<script src="js/config.js"></script>
+
+</body>
+</html>

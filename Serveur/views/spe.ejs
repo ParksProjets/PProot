@@ -1,0 +1,55 @@
+<html>
+<head>
+	
+	<title>Panel Spe</title>
+
+	<link rel="stylesheet" href="css/spe.css">
+
+</head>
+<body>
+	
+	
+	
+	<div id="page-password">
+
+		<form>
+			<input type="password" placeholder="Entrez le mot de passe">
+			<button type="submit">></button>
+		</form>
+
+	</div>
+
+
+
+	
+	<div id="page-main" class="container">
+
+		<%
+			for (var i = 0, l = affichages.length; i < l; i++) {
+				var aff = affichages[i];
+			%>
+				
+				<div class="views" data-name="<%= aff.name %>">
+					
+					<% if (affichages[i].hasHtml) { %>
+						<i class="edit">&#xe600;</i>
+					<% } %>
+
+					<p><%= aff.displayName %></p>
+				</div>
+				
+
+			<% } %>
+		
+
+	</div>
+
+
+
+	<script src="js/jquery.js"></script>
+	<script src="js/TweenMax.js"></script>
+	<script src="js/spe.js"></script>
+
+
+</body>
+</html>

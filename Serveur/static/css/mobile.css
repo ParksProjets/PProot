@@ -1,0 +1,110 @@
+/*
+
+Page mobile
+
+*/
+
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+
+body {
+	font: 18px Arial, sans-serif;
+}
+
+
+
+#password {
+	text-align: center;
+	margin-top: 50px;
+}
+
+
+
+
+#list {
+	display: none;
+}
+
+
+
+#list > div {
+	text-align: center;
+	padding: 20px 0;
+	height: 31px;
+	background: #C5C5C5;
+}
+
+#list > div:nth-child(odd) {
+	background: #ADADAD;
+}
+
+#list .main {
+	background: #7281EA !important;
+	font-size: 16px;
+}
+
+
+
+
+
+#button {
+	display: none;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: #DBDBDB;
+}
+
+
+#buttonOn, #buttonOff {
+	position: absolute;
+	top: 20px;
+	bottom: 20px;
+	left: 20px;
+	right: 20px;
+	border-radius: 6px;
+}
+
+#buttonOff {
+	background: #27BE27;
+	background: -webkit-linear-gradient(right, #27BE27, #108C10);
+	background: -moz-linear-gradient(right, #27BE27, #108C10);
+	background: -ms-linear-gradient(right, #27BE27, #108C10);
+	background: -o-linear-gradient(right, #27BE27, #108C10);
+	background: linear-gradient(to left, #27BE27, #108C10);
+}
+
+#buttonOn {
+	background: #BA2222;
+	background: -webkit-linear-gradient(right, #AB1F1F, #C02626);
+	background: -moz-linear-gradient(right, #AB1F1F, #C02626);
+	background: -ms-linear-gradient(right, #AB1F1F, #C02626);
+	background: -o-linear-gradient(right, #AB1F1F, #C02626);
+	background: linear-gradient(to left, #AB1F1F, #C02626);
+}
+
+
+#buttonOn p, #buttonOff p {
+	top: 50%;
+	left: 50%;
+	font-size: 65px;
+	color: #fff;
+	display: table;
+	white-space: nowrap;
+	position: absolute;
+
+	-webkit-transform: rotate(90deg) translate(-50%, 50%);
+	-webkit-transform-origin: 0.6em center;
+
+	-o-transform: rotate(90deg) translate(-50%, 50%);
+	-o-transform-origin: 0.6em center;
+
+	transform: rotate(90deg) translate(-50%, 50%);
+	transform-origin: 0.6em center;
+}

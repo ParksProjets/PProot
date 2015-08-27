@@ -1,0 +1,91 @@
+<!--
+
+Affichage: Musique
+
+-->
+
+
+
+
+<div class="panel" data-name="musique">
+	
+
+	<h3>Musique</h3>
+	
+	<div class="span2" style="margin-bottom:20px">
+
+		<select id="affMuSelect">
+			<option value=""></option>
+			<option value="Oh Yeah! .mp3">Oh Yeah!</option>
+			<option value="Epic Sax Guy.mp3">Epic Sax Guy</option>
+		</select><br>
+
+		ou <label for="affMuSrc">Url:</label>
+		<input type="text" id="affMuSrc">
+		<br><br>
+
+		<label for="affMuVolume">Volume:</label>
+		<input id="affMuVolume" type="range" value="100" max="100" min="0" step="1" style="height:10px">
+
+	</div>
+
+	<div class="span2">
+		<button id="affMuPlay" class="btn btn-inline">Play</button>
+		<button id="affMuPause" class="btn btn-inline">Pause</button>
+	</div>
+
+	
+
+	<h3>Apparence</h3>
+	
+	<label for="affMuText">Text:</label>
+	<input type="text" id="affMuText">
+
+</div>
+
+
+
+<script>
+
+var $muSrc = $("#affMuSrc"),
+	$muSelect = $("#affMuSelect"),
+	$muVolume = $("#affMuVolume"),
+	$muText = $("#affMuText");
+
+
+$("#affMuPlay").click(function() {
+	var src = $muSelect.val() || $muSrc.val() || '';
+	App.post("affichageCmd", { aff: "musique", cmd: "play", src: src });
+
+	$muSelect.find('option:eq(0)').prop('selected', true);
+	$muSrc.val('');
+});
+
+
+$muVolume.change(function() {
+	App.post("affichageCmd", { aff: "musique", cmd: "setVolume", volume: $(this).val() });
+});
+
+
+$("#affMuPause").click(function() {
+	App.post("affichageCmd", { aff: "musique", cmd: "pause" });
+});
+
+
+$muText.change(function() {
+	App.post("affichageCmd", { aff: "musique", cmd: "setText", text: $(this).val() });
+});
+
+
+
+App.addEventListener("set-AFFmusique", function(e) {
+	var obj = e.message.value;
+
+	if (!$muVolume.is(":focus"))
+		$muVolume.val(obj.volume);
+
+	if (!$muText.is(":focus"))
+		$muText.val(obj.text);
+});
+
+</script>

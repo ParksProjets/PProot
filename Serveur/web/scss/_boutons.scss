@@ -1,0 +1,43 @@
+/*
+
+Style des boutons
+
+*/
+
+
+
+
+// Classe générale
+.btn {
+	
+	border: none;
+	background: #55CB55;
+	display: block;
+	padding: 11px 25px;
+	border-radius: 5px;
+	color: #FFF;
+	cursor: pointer;
+	font-size: 13px;
+	transition: background .4s;
+	-webkit-transition: background .4s;
+
+
+	&:hover {
+		background: #35B635;
+	}
+
+}
+
+
+
+
+// Boutton rouge
+.btn-red {
+
+	background: #F44646;
+	
+	&:hover {
+		background: #DF2121;
+	}
+
+}

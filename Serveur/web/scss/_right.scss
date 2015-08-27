@@ -1,0 +1,55 @@
+/*
+
+Style du panel à dorite
+
+*/
+
+
+
+
+// Générale
+
+.right {
+
+	.btn-large {
+		margin: 0 auto 0;
+		width: 200px;
+	}
+	
+
+	h3 {
+		padding-bottom: 10px;
+	}
+
+	h3:not(:first-of-type) {
+		margin-top: 35px;
+	}
+
+}
+
+
+
+
+
+
+
+// Bouton "Activer sur tous"
+
+#btn-unactiveOnAll {
+	display: none;
+}
+
+
+
+// Boutton "Séquences"
+
+#btn-seqOff {
+	display: none;
+}
+
+
+#seqPricipale {
+	margin-bottom: 12px;
+	text-align: center;
+	font-size: 15px;
+}

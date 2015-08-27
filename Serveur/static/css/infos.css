@@ -1,0 +1,43 @@
+/*
+
+Page de config
+
+*/
+
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+
+body {
+	font: 18px Arial, sans-serif;
+	margin: 30px;
+}
+
+
+h1 {
+	font-size: 30px;
+	text-decoration: underline;
+	margin-bottom: 20px;
+}
+
+
+a {
+	display: block;
+	color: #3B6DEF;
+	text-decoration: none;
+	font-size: 20px;
+	margin-bottom: 20px;
+}
+
+
+.deploitNbr {
+	margin-bottom: 20px;
+}
+
+
+.ip {
+	padding: 5px 10px;
+}

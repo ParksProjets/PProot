@@ -1,0 +1,39 @@
+/*
+
+Style de la liste des PC
+
+*/
+
+
+#pc-list {
+	
+	width: 100%;
+
+
+	th, td {
+		height: 25px;
+		line-height: 25px;
+		padding: 8px;
+		text-align: left;
+		border-bottom: 1px solid #DDD;
+	}
+
+
+	tbody tr {
+		transition: background .3s;
+		-webkit-transition: background .3s;
+	
+		&:hover {
+			background-color: #F5F5F5;
+		}
+	}
+
+
+	.btn {
+		padding: 8px 15px;
+		font-size: 12px;
+		display: inline;
+		margin-right: 10px;
+	}
+
+}

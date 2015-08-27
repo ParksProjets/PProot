@@ -1,0 +1,386 @@
+<html>
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no"/>
+
+	<title>Maths</title>
+
+	<style>
+
+	* {
+		margin: 0;
+		padding: 0;
+	}
+
+	
+	body {
+		font: 20px Arial;
+		background: #F7F7F7;
+		margin: 20px 160px;
+		text-align: center;
+	}
+
+	h2 {
+		margin-bottom: 20px;
+	}
+	
+
+	.q {
+		display: none;
+	}
+
+	
+	.error {
+		opacity: 0;
+		color: red;
+		margin: 15px 0;
+		-webkit-transition: opacity .4s;
+	}
+
+	.ok {
+		display: none;
+		color: green;
+	}
+
+
+	.rep {
+		display: none;
+		margin-top: 20px;
+		line-height: 26px;
+	}
+
+
+	#toCont {
+		margin-top: 10px;
+	}
+
+	#btnRep, #next, #quit {
+		display: none;
+		cursor: pointer;
+		color: #3B71FC;
+	}
+
+	#next, #quit {
+		margin-top: 20px;
+	}
+
+
+	</style>
+
+</head>
+<body>
+
+	<h2>Petit Quizz !</h2>
+	
+	<div class="q" id="q1">
+		
+		Complétez cette suite: <b>1</b> <b>3</b> <b>5</b> <b>7</b> <b>?</b><br>
+		<br>
+		Votre réponse: <input id="inputQ1" type="text">
+
+		<p id="errorQ1" class="error">Cette réponse n'est pas correcte</p>
+		<p id="okQ1" class="ok">Réponse correcte !</p>
+
+		<div id="repQ1" class="rep">
+			La réponse était <b>217341</b> car dans la fonction:<br>
+			f(x) = 9055.5 x<sup>4</sup> - 90555 x³ + 316942.5 x² - 452773 x + 217331<br>
+			f(1) = 1<br>
+			f(2) = 3<br>
+			f(3) = 5<br>
+			f(4) = 7<br>
+			f(5) = 217341<br>
+		</div>
+
+	</div>
+
+
+
+	<div class="q" id="q2">
+		Comment obtenir <b>24</b> en utilisant une seule fois les chiffres <b>5</b>, <b>5</b>, <b>5</b> et <b>1</b> dans l'ordre que vous voulez.<br>Les seules opérations autorisées sont <b>+</b>, <b>-</b>, <b>*</b>, <b>/</b>, ainsi que les parenthèses.<br>
+		<br>
+		Votre calcul: <input id="inputQ2" type="text">
+
+		<p id="errorQ2" class="error">Ce calcul ne fait pas 24 !</p>
+		<p id="okQ2" class="ok">Réponse correcte !</p>
+
+		<div id="repQ2" class="rep">
+			La réponse était <b>5*(5-1/5)</b>.
+		</div>
+	</div>
+
+
+
+	<div class="q" id="q3">
+		Vous faites, en voiture, le trajet de votre domicile à votre travail à une vitesse moyenne de 20km/h.<br>
+		A quelle vitesse devez-vous faire le retour pour que votre vitesse moyenne d’aller-retour soit de 40km/h ?<br>
+		<br>
+		Vitesse: <input id="inputQ3" type="text">
+		
+		<p id="errorQ3" class="error">Vitesse incorrecte !</p>
+		<p id="okQ3" class="ok">Réponse correcte !</p>
+
+		<div id="repQ3" class="rep">
+			Il faut une vitesse infinie !
+		</div>
+	</div>
+
+
+
+	<div class="q" id="q4">
+		Deux trains sont à une distance de 200km et se foncent desssus à une vitesse de 20km/h.<br>
+		Une mouche fait des allers-retours entre les deux trains à une vitesse de 30km/h.<br>
+		<br>
+		Quelle distance aura parcourru la mouche quand les deux trains se cogneront ?<br>
+		<br>
+		Distance: <input id="inputQ4" type="text">
+		
+		<p id="errorQ4" class="error">Distance incorrecte !</p>
+		<p id="okQ4" class="ok">Réponse correcte !</p>
+
+		<div id="repQ4" class="rep">
+			La mouche aura parcourru <b>150 km</b> !<br>
+			En effet, les trains se cogneront dans 5h, 30km/h * 5h = 150km.
+		</div>
+	</div>
+
+
+
+	<div class="q" id="q5">
+		Soit un terrain rectangulaire de grande longueur et petite largeur.<br>
+		Tous les mois, une nouvelle personne souhaite habiter sur le terrain.<br>
+		On coupe alors le grand terrain d'origine sur la longueur en sections identiques,<br>
+		tel qu'on crée autant de sections qu'il y a d'habitants (incluant le nouvel habitant).<br>
+		Cette personne contruit alors sa maison où elle veut sur la section qu'elle vient de recevoir.<br>
+		Mais si deux maisons se retrouvent sur la même section lors de la découpe,<br>
+		cette nouvelle personne ne pourra pas emménager.<br>
+		On a alors atteint le nombre maximum de personnes sur le terrain.<br>
+		<br>
+		Si l'on a beaucoup de chance que les maisons soient bien placées,<br>
+		combien peut-il y avoir d'habitants sur le terrain au maximum ?<br>
+		<br>
+		Votre réponse: <input id="inputQ5" type="text">
+		
+		<p id="errorQ5" class="error">Réponse incorrecte !</p>
+		<p id="okQ5" class="ok">Réponse correcte !</p>
+
+		<div id="repQ5" class="rep">
+			La réponse est: <b>17</b> !<br>
+			On appelle cette enigme le problème d'irrégularité des distributions.
+		</div>
+	</div>
+
+
+	
+
+
+	<p id="toCont">Vous pourrez savoir la réponse dans <span id="to">30</span>s.</p>
+	<p id="btnRep">Montrer la réponse</p>
+	
+	<p id="next">Question suivante</p>
+
+	<p id="quit">Quitter le Quizz</p>
+
+
+
+	<script>
+
+
+	// Fonctions utiles
+
+	function getId(id) {
+		return document.getElementById(id);
+	}
+
+	function show(elem) {
+		elem.style.display = "block";
+		return elem;
+	}
+
+	function hide(elem) {
+		elem.style.display = "none";
+		return elem;
+	}
+
+
+	function parseCalcul(str) {
+
+		if (!/^[0-9\*\+\-\/\(\)]+$/.test(str))
+			return 0;
+
+		str = str.replace(/([0-9])\s*\(/g, "$1*(");
+
+		try {
+			return eval(str);
+		} catch(e) {
+			return 0;
+		}
+	}
+
+
+
+	var active = true;
+
+	var nbQuestions = 0, current = 0;
+
+	var $next = getId("next"),
+		$btnRep = getId("btnRep"),
+		$toCont = getId("toCont"),
+		$quit = getId("quit");
+
+
+
+
+	// Enchianement des questions
+
+	function showNextQuestion() {
+
+		if (current)
+			hide(getId("q" + current));
+
+		current++;
+		if (current > nbQuestions) {
+			current = 1;
+			show($quit);
+		}
+
+		// Timer + btns
+		hide($next);
+		show($toCont);
+
+		// Question
+		hide(getId("repQ" + current));
+		hide(getId("okQ" + current));
+
+		show(getId("errorQ" + current)).style.opacity = 0;
+
+		getId("inputQ" + current).value = '';
+
+		active = true;
+		show(getId("q" + current));
+		startTimer(30);
+	}
+
+
+	function okAndNext() {
+		active = false;
+
+		hide($toCont);
+		hide($btnRep);
+		hide(getId("errorQ" + current));
+
+		show(getId("repQ" + current));
+		show($next);
+	}
+
+
+
+	// Inputs de réponse
+
+	function createRep(num, callback) {
+
+		nbQuestions++;
+
+		var $input = getId("inputQ" + num),
+			$error = getId("errorQ" + num),
+			$ok = getId("okQ" + num),
+			$rep = getId("repQ" + num);
+
+		$input.addEventListener("keydown", function(e) {
+			if (!active)  return;
+
+			$error.style.opacity = 0;
+
+			if (e.keyCode != 13)  return;
+
+			if (callback(this.value)) {
+				show($ok);
+				okAndNext();
+			}
+			else
+				$error.style.opacity = 1;
+
+		}, false);
+	}
+
+
+
+
+
+	// Q1
+	createRep("1", function(val) {
+		return val == "217341";
+	});
+
+	// Q2
+	createRep("2", function(val) {
+		if ((val.match(/[0-9]/g)||[]).length != 4 || (val.match(/5/g)||[]).length != 3 || (val.match(/1/g)||[]).length != 1)
+			return false;
+
+		return parseCalcul(val) == 24;
+	});
+
+	// Q3
+	createRep("3", function(val) {
+		return /(vitesse )?infinie|impossible/i.test(val);
+	});
+
+	// Q4
+	createRep("4", function(val) {
+		return /150 ?(km)?/i.test(val);
+	});
+
+	// Q5
+	createRep("5", function(val) {
+		return val == "17";
+	});
+
+
+
+	// Bouton réponse
+	$btnRep.addEventListener("click", okAndNext, false);
+
+	// Bouton next question
+	$next.addEventListener("click", showNextQuestion, false);
+
+	$quit.addEventListener("click", function() {
+		PProot.message("end");
+		document.body.innerHTML = "Chargement...";
+	}, false);
+
+
+	// Timer
+
+	var $to = document.getElementById("to"),
+		timer = 0,
+		delay = 0;
+
+	function startTimer(d) {
+		clearInterval(timer);
+
+		delay = d || delay;
+		$to.innerHTML = delay--;
+
+		timer = setInterval(function() {
+			$to.innerHTML = delay--;
+
+			if (delay < 0)
+				stopTimer();
+		}, 1000);
+	}
+
+	function stopTimer() {
+		clearInterval(timer);
+		hide($toCont);
+		show($btnRep);
+	}
+
+
+
+	// Init
+	showNextQuestion();
+
+	</script>
+
+</body>
+</html>

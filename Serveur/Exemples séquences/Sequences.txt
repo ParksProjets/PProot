@@ -1,0 +1,54 @@
+*****************
+
+Séquences
+
+*****************
+
+
+Charmasson:
+
+lock
+setView "web", url: "l:Charmasson.html", input: false
+delay 100
+
+
+
+
+Gibert:
+
+lock
+setView "web", url: "l:Gibert.min.html", input: false
+delay 1200
+
+
+
+
+
+Maths:
+
+lock
+setView "web", url: "l:Maths.min.html", input: true
+waitReceiving "end", 1800
+
+
+
+
+
+
+Main:
+
+lock
+setView "musique", src: "Oh Yeah! .mp3", text: "Music"
+delay 10
+viewCmd text: "for"
+delay 10
+viewCmd text: "everyone !"
+delay 30
+viewCmd text: "Attendez"
+delay 10
+viewCmd text: "Vous allez bientôt jouer !"
+delay 20
+viewCmd text: "Play !"
+delay 5
+setView "flappy"
+delay 600
